@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+// Colours
+$yellow: #fff200;
+$blue: #00c3ff;
+$dark-grey: #1f1f1f;
+$white: #FFFFFF;
+
+body {
+	background-color: $white;
+}
+
+// Typography
+.main-title {
+	font-family: 'Lobster';
+	font-size: 7em;
+	color: $blue;
+	margin-top: 0;
+}
+
+// Sections
+@mixin contentSection($top-bottom-padding, $left-right-padding, $color) {
+	padding-top: $top-bottom-padding;
+    padding-bottom: $top-bottom-padding;
+    padding-left: $left-right-padding;
+    padding-right: $left-right-padding;
+    background-color: $color;
+}
+
+.blue-section {
+	@include contentSection(4em, 6em, $blue);
+}
+
+.yellow-section {
+	@include contentSection(4em, 6em, $yellow);
+}
+
+.main-section {
+	@include contentSection(0, 0, $yellow);
+	height: 100vh;
+    min-height: 100vh;
+}
+
+// Utilities
+.center {
+	text-align: center;
+}
+
+.align-vertical {
+	position: relative;
+	top: 30%;
+}
