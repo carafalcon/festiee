@@ -204,6 +204,53 @@ header {
     #timeline .timeline-item .timeline-icon {
       left: 0; } }
 
+#quote-carousel {
+  padding: 0 10px 30px 10px;
+  margin-top: 60px; }
+
+#quote-carousel .carousel-control {
+  background: none;
+  color: #CACACA;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px; }
+
+#quote-carousel .carousel-indicators {
+  position: relative;
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-top: 20px;
+  margin-right: -19px; }
+
+#quote-carousel .carousel-indicators li {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  opacity: 0.4;
+  overflow: hidden;
+  transition: all .4s ease-in;
+  vertical-align: middle; }
+
+#quote-carousel .carousel-indicators .active {
+  width: 128px;
+  height: 128px;
+  opacity: 1;
+  transition: all .2s; }
+
+.item blockquote {
+  border-left: none;
+  margin: 0; }
+
+.item blockquote p:before {
+  content: "\f10d";
+  font-family: 'Fontawesome';
+  float: left;
+  margin-right: 10px; }
+
 body {
   background-color: #FFFFFF;
   font-family: Montserrat; }
@@ -277,6 +324,19 @@ body {
       padding-left: 2em;
       padding-right: 2em; } }
 
+.dark-section-footer {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #1f1f1f; }
+  @media (max-width: 600px) {
+    .dark-section-footer {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      padding-left: 0.25em;
+      padding-right: 0.25em; } }
+
 .main-section {
   padding-top: 0;
   padding-bottom: 0;
@@ -333,7 +393,7 @@ body {
   position: relative;
   width: 2.5em;
   top: 30%;
-  left: 17%; }
+  left: 15%; }
 
 .icon-center {
   top: 27%;
@@ -350,3 +410,15 @@ body {
 @media (min-width: 768px) {
   .container-adjust {
     width: auto; } }
+
+.modal-dialog {
+  margin-top: 30vh; }
+
+.btn, .btn:focus {
+  background-color: #FFFFFF;
+  color: #1f1f1f;
+  border-color: #1f1f1f;
+  box-shadow: 2px 2px 0 #1f1f1f; }
+
+.btn:hover {
+  box-shadow: none; }

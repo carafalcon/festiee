@@ -1,4 +1,5 @@
 @import 'timeline';
+@import 'carousel';
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
@@ -69,6 +70,10 @@ body {
 	@include contentSection(4em, 6em, $off-white, 2em, 2em);
 }
 
+.dark-section-footer {
+	@include contentSection(1.5em, 1em, $dark-grey, 0.5em, 0.25em);
+}
+
 .main-section {
 	@include contentSection(0, 0, $yellow, 0, 0);
 	height: 100vh;
@@ -130,7 +135,7 @@ body {
 	position: relative;
 	width: 2.5em;
 	top: 30%;
-    left: 17%;
+    left: 15%;
 }
 
 .icon-center {
@@ -152,4 +157,19 @@ body {
   @media (min-width: 768px) {
     width: auto;
   }
+}
+
+.modal-dialog {
+	margin-top: 30vh;
+}
+
+.btn, .btn:focus {
+	background-color: $white;
+	color: $dark-grey;
+	border-color: $dark-grey;
+	box-shadow: 2px 2px 0 $dark-grey;
+}
+
+.btn:hover {
+	box-shadow: none;
 }
