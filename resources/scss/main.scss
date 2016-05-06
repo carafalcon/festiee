@@ -1,44 +1,96 @@
+@import 'timeline';
 @import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 // Colours
 $yellow: #fff200;
 $blue: #00c3ff;
 $dark-grey: #1f1f1f;
+$off-white: #f7f7f7;
 $white: #FFFFFF;
+$black: #000000;
 
 body {
 	background-color: $white;
+	font-family: Montserrat;
 }
 
 // Typography
 .main-title {
 	font-family: 'Lobster';
-	font-size: 7em;
+	font-size: 8em;
 	color: $blue;
 	margin-top: 0;
 }
 
+.blurb {
+	font-size: 2em;
+	line-height: 1.1em;
+}
+
+.title {
+	font-size: 3em;
+	font-family: 'Lobster';
+}
+
+.bold {
+	font-family: 'Lobster';
+}
+
 // Sections
-@mixin contentSection($top-bottom-padding, $left-right-padding, $color) {
+@mixin contentSection($top-bottom-padding, $left-right-padding, $color, $media-top-bottom-padding, $media-left-right-padding) {
 	padding-top: $top-bottom-padding;
     padding-bottom: $top-bottom-padding;
     padding-left: $left-right-padding;
     padding-right: $left-right-padding;
     background-color: $color;
+
+    @media (max-width: 600px) {
+    	padding-top: $media-top-bottom-padding;
+    	padding-bottom: $media-top-bottom-padding;
+    	padding-left: $media-left-right-padding;
+    	padding-right: $media-left-right-padding;
+  }
 }
 
 .blue-section {
-	@include contentSection(4em, 6em, $blue);
+	@include contentSection(4em, 6em, $blue, 2em, 0);
 }
 
 .yellow-section {
-	@include contentSection(4em, 6em, $yellow);
+	@include contentSection(4em, 6em, $yellow, 2em, 2em);
+}
+
+.dark-section {
+	@include contentSection(4em, 4em, $dark-grey, 2em, 2em);
+}
+
+.light-section {
+	@include contentSection(4em, 6em, $off-white, 2em, 2em);
 }
 
 .main-section {
-	@include contentSection(0, 0, $yellow);
+	@include contentSection(0, 0, $yellow, 0, 0);
 	height: 100vh;
     min-height: 100vh;
+    position: relative;
+    background: $yellow url('../../assets/imgs/confetti_overlay.png') no-repeat; 
+    background-size: 100%;
+
+    @media (min-width: 768px) {
+    background: $yellow url('../../assets/imgs/confetti_overlay2.png') no-repeat; 
+    background-size: 100%;
+  }
+}
+
+.main-content {
+	position: relative;
+	top: 30vh;
+}
+
+// Images
+.tickets {
+	width: 50vh;
 }
 
 // Utilities
@@ -46,7 +98,58 @@ body {
 	text-align: center;
 }
 
-.align-vertical {
+.italic {
+	font-style: italic;
+}
+
+.yellow {
+	color: $yellow;
+}
+
+.blue {
+	color: $blue;
+}
+
+.dark-grey {
+	color: $dark-grey;
+}
+
+.light {
+	color: $off-white;
+}
+
+// App store badge sizing
+.width-25 {
+	width: 25%;
+	max-width: 200px;
+	min-width: 130px;
+}
+
+// Icon Formatting
+.img-icon-center {
 	position: relative;
+	width: 2.5em;
 	top: 30%;
+    left: 17%;
+}
+
+.icon-center {
+	top: 27%;
+    left: 31%;
+    font-size: 1.5em;
+}
+
+.icon-bottom {
+	position: absolute;
+    width: 100%;
+    bottom: 2vh;
+    text-align: center;
+    font-size: 2em;
+}
+
+// Overrides
+.container-adjust {
+  @media (min-width: 768px) {
+    width: auto;
+  }
 }
