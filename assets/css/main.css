@@ -262,7 +262,7 @@ body {
   margin-top: 0; }
 
 .blurb {
-  font-size: 2em;
+  font-size: 1.3em;
   line-height: 1.1em; }
 
 .title {
@@ -271,6 +271,10 @@ body {
 
 .bold {
   font-family: 'Lobster'; }
+
+#myModalLabel {
+  font-family: 'Lobster';
+  font-size: 2em; }
 
 .blue-section {
   padding-top: 4em;
@@ -363,6 +367,15 @@ body {
   position: relative;
   top: 30vh; }
 
+.white-container {
+  background-color: #f7f7f7;
+  border-radius: .5em;
+  padding: 2em;
+  text-align: center; }
+  @media (max-width: 900) {
+    .white-container {
+      margin-bottom: 30px; } }
+
 .tickets {
   width: 50vh; }
 
@@ -413,6 +426,9 @@ body {
 
 .modal-dialog {
   margin-top: 30vh; }
+  @media (max-width: 610px) {
+    .modal-dialog {
+      margin-top: 15vh; } }
 
 .btn, .btn:focus {
   background-color: #FFFFFF;
@@ -422,3 +438,6 @@ body {
 
 .btn:hover {
   box-shadow: none; }
+
+#quote-carousel {
+  margin-top: 0; }
