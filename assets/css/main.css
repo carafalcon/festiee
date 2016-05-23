@@ -303,8 +303,8 @@ body {
       padding-right: 2em; } }
 
 .dark-section {
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 0em;
+  padding-bottom: 0em;
   padding-left: 4em;
   padding-right: 4em;
   background-color: #1f1f1f; }
@@ -371,10 +371,9 @@ body {
   background-color: #f7f7f7;
   border-radius: .5em;
   padding: 2em;
-  text-align: center; }
-  @media (max-width: 900) {
-    .white-container {
-      margin-bottom: 30px; } }
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 3em; }
 
 .tickets {
   width: 50vh; }
