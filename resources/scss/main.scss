@@ -69,6 +69,7 @@ body {
 
 .dark-section {
 	@include contentSection(4em, 4em, $dark-grey, 2em, 2em);
+	min-width: 
 }
 
 .light-section {

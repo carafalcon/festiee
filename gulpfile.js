@@ -2,10 +2,6 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	livereload = require('gulp-livereload');
 
-gulp.task('poop', function(){
-	console.log('ian is a poop!');
-});
-
 gulp.task('sass', function(){
 	gulp.src('resources/scss/**/*.scss')
 	.pipe(sass())
